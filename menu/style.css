@@ -46,6 +46,8 @@ html, body {
     font-size: 1.5vw;
     text-align: center;
     padding-top: 1%;
+    transition: all 0.1s linear;
+    z-index: 3;
 }
 
 #card1 {
@@ -100,6 +102,15 @@ html, body {
     border-radius: 50px;
     background-color: white;
     color: #aa3030;
-    margin-top: 80%;
+    margin-top: 20vh;
     margin-left: 25%;
+    z-index: 2;
+}
+
+.pizza {
+    clip-path: circle(10%);
+}
+
+span {
+    z-index: 0;
 }
