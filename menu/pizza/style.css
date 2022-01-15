@@ -89,14 +89,24 @@ body {
     margin: 2vw;
 }
 
-#specials {
+#options {
     grid-column: 3;
     grid-row: 2;
-    display: flex;
+    display: grid;
     width: 100%;
-    height: 10%;
-    justify-content: center;
+    height: 20vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
     align-self: flex-end;
+}
+
+#specials {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
 @keyframes graya {
@@ -128,4 +138,22 @@ body {
 
 #none {
     width: 5vw;
+}
+
+#customize {
+    border-radius: 50px;
+    width: 30%;
+    height: 60%;
+    background-color: #aa3030;
+    color: white;
+    font-size: 0.75vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    display: table;
+    justify-self: center;
+}
+
+#customize h1 {
+    display: table-cell;
+    vertical-align: middle;
 }

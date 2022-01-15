@@ -1,6 +1,7 @@
 const macncheese = document.querySelector('#macncheese')
 const none = document.querySelector('#none')
 const pizza = document.querySelector('#pizza')
+const storage = window.localStorage
 
 macncheese.addEventListener('click', () => {
     macncheese.classList.add('grayfill')
@@ -24,4 +25,21 @@ none.addEventListener('click', () => {
             pizza.classList.remove('fade')
         }, 250);
     }, 250);
+})
+
+const title = document.querySelector('#name')
+title.addEventListener('click', () => {
+    window.open('../../index.html')
+})
+
+const customize = document.querySelector('#customize')
+customize.addEventListener('click', () => {
+    if (none.classList.contains('grayfill')) {
+        storage.setItem('pizzaType', 'normal')
+        console.log(storage.getItem('pizzaType'))
+    } else {
+        storage.setItem('pizzaType', 'macncheese')
+        console.log(storage.getItem('pizzaType'))
+    }
+    window.open('../customize')
 })
