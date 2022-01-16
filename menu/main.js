@@ -3,18 +3,13 @@ title.addEventListener('click', () => {
     window.open('../index.html')
 })
 
-const card1 = document.querySelector('#card1')
-const card2 = document.querySelector('#card2')
-const card3 = document.querySelector('#card3')
-
-card1.addEventListener('click', () => {
-    window.open('../menu/pizza')
-})
-
-card2.addEventListener('click', () => {
-    window.open('../menu/toppings')
-})
-
-card3.addEventListener('click', () => {
-    window.open('../menu/sides')
+const btn = document.querySelector('#makePizza')
+btn.addEventListener('click', () => {
+    btn.classList.toggle('fill')
+    setTimeout(() => {
+        btn.innerText = ''
+    }, 50);
+    setTimeout(() => {
+        window.open('../menu/pizza')
+    }, 2500);
 })

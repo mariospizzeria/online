@@ -34,100 +34,54 @@ html, body {
     padding: 3%;
 }
 
-#cardContainer {
-    width: 100%;
-    height: 90%;
-    display: grid;
-    grid-template-columns: 10% 80% 10%;
-    grid-template-rows: 100%;
-    padding-top: 5%;
-}
-
-.card {
-    width: 20%;
-    height: 45%;
-    background: #aa3030;
-    grid-column: 2;
-    border-radius: 5%;
-    color: white;
-    font-family: Luckiest Guy;
-    font-size: 2vw;
-    text-align: center;
-    transition: all 0.1s linear;
-    z-index: 3;
-}
-
-#topCards {
+#main {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    grid-column: 2;
-    grid-row: 1;
-    margin-top: 1%;
 }
 
-#card1::before {
-    content: "";
-    border-radius: 5%;
-    width: 100%;
-    height: 100%;
-    background-image: url("https://cdn.discordapp.com/attachments/926567728846864427/931998731845374032/white-pizza-tablefortwoblog-3.png");
-    display: inline-block;
-    clip-path: circle(0%);
-    transition: all 500ms linear;
+@keyframes fill {
+    20% {
+        color: #aa3030;
+    }
+    30% {
+        height: 20vh;
+        width: 20vh;
+        border-radius: 100%;
+    }
+    35% {
+        height: 20vh;
+        width: 20vh;
+        border-radius: 100%;
+    }
+    100% {
+        height: 120vh;
+        width: 120vw;
+    }
 }
 
-#card1:hover::before {
-    clip-path: circle(100%);
+.fill {
+    animation: fill 2000ms ease-in-out;
+    animation-fill-mode: forwards;
+    border-radius: 100%;
 }
 
-#card2::before {
-    content: "";
-    border-radius: 5%;
-    width: 100%;
-    height: 100%;
-    background-image: url("https://cdn.discordapp.com/attachments/926567728846864427/930317176215339018/The-Top-10-Most-Popular-Pizza-Toppings-Almost-Everyone-Loves.png");
-    background-size: 200%;
-    background-position: 40% 10%;
-    display: inline-block;
-    clip-path: circle(0%);
-    transition: all 500ms linear;
-    background-repeat: no-repeat;
+#makePizza {
+    width: 25vw;
+    height: 15vh;
+    background-color: #aa3030;
+    border-radius: 100px;
+    color: white;
+    font-family: Luckiest Guy;
+    font-size: 3vh;
+    display: table;
+    text-align: center;
+    z-index: 6;
 }
 
-#card2:hover::before {
-    clip-path: circle(100%);
-}
-
-#card3::before {
-    content: "";
-    border-radius: 5%;
-    width: 100%;
-    height: 100%;
-    background-image: url("https://cdn.discordapp.com/attachments/926567728846864427/930314708102291546/2-2-2-3foodgroups_fruits_detailfeature.png");
-    display: inline-block;
-    clip-path: circle(0%);
-    transition: all 500ms linear;
-}
-
-#card3:hover::before {
-    clip-path: circle(100%);
-}
-
-.details {
-    height: 12%;
-    width: 55%;
-    font-size: 1.4vw;
-    border-radius: 50px;
-    background-color: white;
-    color: #aa3030;
-    margin-top: 29vh;
-    margin-left: 25%;
-}
-
-.pizza {
-    width: 10vw;
-    clip-path: circle(100%);
+#makePizza h1 {
+    display: table-cell;
+    vertical-align: middle;
 }

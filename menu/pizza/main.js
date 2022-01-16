@@ -43,3 +43,12 @@ customize.addEventListener('click', () => {
     }
     window.open('../customize')
 })
+
+const bigCircle = document.querySelector('#bigCircle')
+setTimeout(() => {
+    bigCircle.style.width = '0vw'
+    bigCircle.style.height = '0vh'
+    setTimeout(() => {
+        bigCircle.remove()
+    }, 200);
+}, 1500);
