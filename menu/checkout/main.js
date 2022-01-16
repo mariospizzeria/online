@@ -51,7 +51,7 @@ invis.style.gridRow = 7 + numToppings
 
 const totalPrice = document.querySelector('#totalPrice')
 const total = document.querySelector('#total')
-
+sides.style.gridRow = 6 + numToppings
 totalPrice.style.gridRow = 5 +numToppings
 total.style.gridRow = 5 + numToppings
 

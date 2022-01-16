@@ -113,6 +113,26 @@ html, body {
     vertical-align: middle;
 }
 
+#sides {
+    width: 18vw;
+    height: 6vw;
+    background-color: #aa3030;
+    color: white;
+    border-radius: 100px;
+    grid-column: 2;
+    font-family: Luckiest Guy;
+    font-size: 1.5vw;
+    display: table;
+    text-align: center;
+    justify-self: center;
+    align-self: flex-end;
+}
+
+#sides h1 {
+    display: table-cell;
+    vertical-align: middle;
+}
+
 #invis {
     width: 100%;
     height: 50px;
