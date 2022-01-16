@@ -42,66 +42,95 @@ body {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 40% 40% 1fr;
-    grid-template-rows: 20% 10% 10% 10% 10% 10%;
+    grid-template-rows: 10% 20% 10% 10% 10% 10% 10% 20%;
     justify-items: center;
     row-gap: 5rem;
+}
+
+@keyframes redify {
+    100% {
+        color: white;
+        background-color: #aa3030;
+    }
 }
 
 .topping {
     width: 75%;
     height: 100%;
     background-color: white;
+    font-family: Luckiest Guy;
     color: #aa3030;
     border: solid #aa3030;
     border-width: 10px;
+    font-size: 2vw;
+    text-align: center;
+    display: table;
+}
+
+.topping h1 {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.redify {
+    animation: redify 250ms linear;
+    animation-fill-mode: forwards;
 }
 
 #topping1 {
-    grid-row: 2;
+    grid-row: 3;
     grid-column: 2;
 }
 
 #topping2 {
-    grid-row: 2;
+    grid-row: 3;
     grid-column: 3;
 }
 
 #topping3 {
-    grid-row: 3;
+    grid-row: 4;
     grid-column: 2;
 }
 
 #topping4 {
-    grid-row: 3;
+    grid-row: 4;
     grid-column: 3;
 }
 
 #topping5 {
-    grid-row: 4;
+    grid-row: 5;
     grid-column: 2;
 }
 
 #topping6 {
-    grid-row: 4;
+    grid-row: 5;
     grid-column: 3;
 }
 
 #topping7 {
-    grid-row: 5;
+    grid-row: 6;
     grid-column: 2;
 }
 
 #topping8 {
-    grid-row: 5;
+    grid-row: 6;
     grid-column: 3;
 }
 
 #topping9 {
-    grid-row: 6;
+    grid-row: 7;
     grid-column: 2;
 }
 
 #topping10 {
-    grid-row: 6;
+    grid-row: 7;
     grid-column: 3;
+}
+
+#pizzaImg {
+    width: 100%;
+    height: auto;
+    align-self: flex-end;
+    grid-row: 1;
+    grid-column: 2;
 }
