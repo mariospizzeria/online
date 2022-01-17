@@ -10,6 +10,6 @@ btn.addEventListener('click', () => {
         btn.innerText = ''
     }, 50);
     setTimeout(() => {
-        window.location.href = ('../menu/pizza')
+        window.location.href = ('../menu/pizza/index.html')
     }, 2500);
 })

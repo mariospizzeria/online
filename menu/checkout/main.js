@@ -75,5 +75,5 @@ totalPrice.innerText = "$" + calcTotal()
 
 const title = document.querySelector('#name')
 title.addEventListener('click', () => {
-    window.location.href = ('../index.html')
+    window.location.href = '../../index.html'
 })

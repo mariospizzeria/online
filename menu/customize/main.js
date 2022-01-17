@@ -3,7 +3,7 @@ const toppingsList = []
 
 const title = document.querySelector('#name')
 title.addEventListener('click', () => {
-    window.location.href = ('../../index.html')
+    window.location.href = '../../index.html'
 })
 
 document.querySelectorAll('.topping').forEach(topping => {
@@ -22,7 +22,7 @@ document.querySelectorAll('.topping').forEach(topping => {
 
 const pizzaImg = document.querySelector('#pizzaImg')
 const pizza = document.querySelector('#pizza')
-
+console.log('ultimate baby tower')
 if(storage.getItem('pizzaType') == 'macncheese') {
     pizzaImg.src = 'https://cdn.discordapp.com/attachments/926567728846864427/931800096364982302/mac_and_cheese_pizza_3-4_b.png'
     pizza.innerText = "Mac N' Cheese"
