@@ -29,7 +29,7 @@ none.addEventListener('click', () => {
 
 const title = document.querySelector('#name')
 title.addEventListener('click', () => {
-    window.open('../../index.html')
+    window.location.href = '../../index.html'
 })
 
 const customize = document.querySelector('#customize')
@@ -41,7 +41,7 @@ customize.addEventListener('click', () => {
         storage.setItem('pizzaType', 'macncheese')
         console.log(storage.getItem('pizzaType'))
     }
-    window.open('../customize')
+    window.location.href = '../customize'
 })
 
 const bigCircle = document.querySelector('#bigCircle')

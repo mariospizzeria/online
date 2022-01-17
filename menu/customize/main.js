@@ -3,7 +3,7 @@ const toppingsList = []
 
 const title = document.querySelector('#name')
 title.addEventListener('click', () => {
-    window.open('../../index.html')
+    window.location.href = ('../../index.html')
 })
 
 document.querySelectorAll('.topping').forEach(topping => {
@@ -39,5 +39,5 @@ next.addEventListener('click', () => {
 
     jsonString = JSON.stringify(jsonToppings)
     storage.setItem('toppings', jsonString)
-    window.open('../checkout')
+    window.location.href = ('../checkout')
 })

@@ -1,6 +1,6 @@
 const title = document.querySelector('#name')
 title.addEventListener('click', () => {
-    window.open('../index.html')
+    window.location.href = ('../index.html')
 })
 
 const btn = document.querySelector('#makePizza')
@@ -10,6 +10,6 @@ btn.addEventListener('click', () => {
         btn.innerText = ''
     }, 50);
     setTimeout(() => {
-        window.open('../menu/pizza')
+        window.location.href = ('../menu/pizza')
     }, 2500);
 })
