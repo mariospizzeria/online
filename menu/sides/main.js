@@ -14,10 +14,57 @@ const sides = {
     saladId: ['caesarSalad', 'houseSalad'],
     fruitId: ['eggplant', 'melon', 'peaches', 'banana']
 }
+const back = document.querySelector('#back')
+const add = document.querySelector('#customize')
+const sidesList = {
+    soup: [],
+    salad: [],
+    fruit: []
+}
+const checkout = document.querySelector('#checkout')
+const storage = window.localStorage
+
+checkout.addEventListener('click', () => {
+    jsonString = JSON.stringify(sidesList)
+    storage.setItem('sides', jsonString)
+    window.location.href = ('../checkout')
+})
+
+back.addEventListener('click', () => {
+    topCards.classList.toggle('slideBackIn')
+    main.classList.toggle('slideBackOut')
+    setTimeout(() => {
+        Array.from(document.getElementsByClassName("option")).forEach(element => {
+            element.remove()
+        });
+        topCards.style.transform = 'translateX(0%)'
+        main.style.transform = 'translateX(100%)'
+        topCards.classList.toggle('slideBackIn')
+        main.classList.toggle('slideBackOut')
+    }, 1000);
+})
+
+add.addEventListener('click', () => {
+    selected = document.querySelector('.grayfill')
+    if(titleName.innerText == 'Soup') {
+        sidesList.soup.push(selected.innerText)
+    } else if (titleName.innerText == 'Salad') {
+        sidesList.salad.push(selected.innerText)
+    } else if (titleName.innerText == 'Fruit') {
+        sidesList.fruit.push(selected.innerText)
+    }
+    console.log(sidesList)
+})
 
 card1.addEventListener('click', () => {
     topCards.classList.toggle('slideOut')
     main.classList.toggle('slideIn')
+    setTimeout(() => {
+        topCards.style.transform = 'translateX(-120%)'
+        main.style.transform = 'translateX(0%)'
+        topCards.classList.toggle('slideOut')
+        main.classList.toggle('slideIn')
+    }, 1000);
     setTimeout(() => {
         broccoliCheddar = document.querySelector('#broccoliCheddar')
         tomatoBisque = document.querySelector('#tomatoBisque')
@@ -70,6 +117,12 @@ card2.addEventListener('click', () => {
     topCards.classList.toggle('slideOut')
     main.classList.toggle('slideIn')
     setTimeout(() => {
+        topCards.style.transform = 'translateX(-120%)'
+        main.style.transform = 'translateX(0%)'
+        topCards.classList.toggle('slideOut')
+        main.classList.toggle('slideIn')
+    }, 1000);
+    setTimeout(() => {
         caesarSalad = document.querySelector('#caesarSalad')
         houseSalad = document.querySelector('#houseSalad')
 
@@ -105,6 +158,12 @@ card2.addEventListener('click', () => {
 card3.addEventListener('click', () => {
     topCards.classList.toggle('slideOut')
     main.classList.toggle('slideIn')
+    setTimeout(() => {
+        topCards.style.transform = 'translateX(-120%)'
+        main.style.transform = 'translateX(0%)'
+        topCards.classList.toggle('slideOut')
+        main.classList.toggle('slideIn')
+    }, 1000);
     titleName.innerText = 'Fruit'
     image.src = 'https://cdn.discordapp.com/attachments/926567728846864427/932550613529657424/152-1522875_aubergine-png-image-eggplant-png.png'
     makeDivs('fruit')
